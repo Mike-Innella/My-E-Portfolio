@@ -12,8 +12,16 @@
   font-weight: 700;
 }
 
+section {
+  background-color: #f5f5f5;
+}
+
 a {
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 li {
@@ -49,7 +57,6 @@ p {
 
 #landing-page {
   min-height: 100vh;
-  background-color: #f5f5f5;
 }
 
 .header {
@@ -90,6 +97,65 @@ p {
   align-items: center;
 }
 
+/*Mail Btn & Scroll*/
+
+.mail__btn {
+  width: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  font-size: 36px;
+  border-radius: 50%;
+  color: #f5f5f5;
+  border: none;
+  background-color: #242424;
+  position: absolute;
+  bottom: 32px;
+  right: 48px;
+}
+
+.mail__btn:hover {
+  background-color: #f7fba6d8;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll__icon {
+  width: 24px;
+  height: 32px;
+  border: 2px solid #242424;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: none;
+}
+
+.scroll__icon::after {
+  content: "";
+  width: 4px;
+  height: 8px;
+  background-color: #242424;
+  border-radius: 4px;
+  animation: scroll 800ms infinite alternate-reverse;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(4px);
+  }
+
+  100% {
+    transform: translateY(-4px);
+  }
+}
+
 /*NAVIGATION*/
 
 nav {
@@ -106,6 +172,7 @@ nav {
 .nav__link--list {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .nav__link {
@@ -119,14 +186,21 @@ nav {
   font-size: 16px;
   color: #242424;
   font-weight: 700;
-  margin: 12px;
-  padding: 4px;
   border-bottom: 2px solid transparent;
 }
 
 .nav__link--anchor:hover {
   width: fit-content;
   border-bottom: 2px solid #0f00de;
+}
+
+.nav__link--anchor--icon {
+  width: fit-content;
+  text-decoration: none;
+  font-size: 20px;
+  color: #242424;
+  font-weight: 700;
+  border-radius: 50%;
 }
 
 #personal-logo {
