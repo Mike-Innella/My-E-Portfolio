@@ -120,13 +120,15 @@ p {
   color: #f5f5f5;
   border: none;
   background-color: #242424;
-  position: absolute;
+  position: fixed;
   bottom: 32px;
   right: 48px;
+  border: 2px solid transparent;
 }
 
 .mail__btn:hover {
   background-color: #f7fba6d8;
+  border: 2px solid #0f00de;
 }
 
 .scroll {
@@ -199,11 +201,6 @@ nav {
   border-bottom: 2px solid transparent;
 }
 
-.nav__link--anchor:hover {
-  width: fit-content;
-  border-bottom: 2px solid #0f00de;
-}
-
 .nav__link--anchor--icon {
   width: fit-content;
   text-decoration: none;
@@ -222,6 +219,35 @@ nav {
   justify-content: center;
   align-items: center;
   margin-left: 12px;
+  padding-right: 8px;
+}
+
+/*NAV LINK EFFECTS*/
+
+.nav__link--anchor {
+  position: relative;
+  transition: all 400ms ease;
+}
+
+.nav__link--anchor::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  right: 0;
+  background-color: #0f00de;
+  transition: width 400ms ease;
+}
+
+.nav__link--anchor:hover::after {
+  width: 100%;
+  left: 0;
+  transition: all 400ms ease;
+}
+
+.nav__link--anchor:hover {
+  color: #0f00de;
 }
 
 /*LANGUAGES*/
@@ -306,6 +332,7 @@ nav {
 .project__wrapper:hover .project__img {
   transform: scale(0.8);
   opacity: 0.5;
+  filter: blur(8px);
 }
 
 .project__wrapper:hover .project__description {
@@ -362,7 +389,7 @@ nav {
 footer {
   width: 100%;
   background-color: #242424;
-  box-shadow: 8px 0 0 0 #1c1d25;
+  box-shadow: 8px 8px 8px 8px #1c1d25;
   margin-top: 48px;
 }
 
@@ -371,7 +398,6 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-right: 8px;
 }
 
 .footer__social--list {
