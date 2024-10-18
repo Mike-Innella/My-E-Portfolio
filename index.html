@@ -110,32 +110,78 @@
           </p>
           <div class="modal__languages--wrapper">
             <figure class="modal__languages">
-              <img
-                src="./assets/tech languages/HTML no script.png"
-                alt=""
-                class="modal__language--pic"
-              />
-              <h4 class="language__text">HTML</h4>
+              <div class="modal__language--pic-wrap">
+                <img
+                  src="./assets/tech languages/HTML no script.png"
+                  alt=""
+                  class="modal__language--pic"
+                />
+                <h4 class="language__text">HTML</h4>
+              </div>
             </figure>
             <figure class="modal__languages">
-              <img
-                src="./assets/tech languages/CSS no script.png"
-                alt=""
-                class="modal__language--pic"
-              />
-              <h4 class="language__text">CSS</h4>
+              <div class="modal__language--pic-wrap">
+                <img
+                  src="./assets/tech languages/CSS no script.png"
+                  alt=""
+                  class="modal__language--pic"
+                />
+                <h4 class="language__text">CSS</h4>
+              </div>
             </figure>
             <figure class="modal__languages">
-              <img
-                src="./assets/tech languages/JS Logo.png"
-                alt=""
-                class="modal__language--pic"
-              />
-              <h4 class="language__text">JAVASCRIPT</h4>
+              <div class="modal__language--pic-wrap">
+                <img
+                  src="./assets/tech languages/JS Logo.png"
+                  alt=""
+                  class="modal__language--pic"
+                />
+                <h4 class="language__text">JAVASCRIPT</h4>
+              </div>
             </figure>
           </div>
         </div>
-        <div class="modal__half modal__contact">Let's have a chat!</div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contat">Let's have a chat!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I'm currently open for new opportunities!
+          </h4>
+          <form id="contact__form" action="">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input
+                class="input"
+                name="user_name"
+                type="text"
+                placeholder="Joe Smith"
+              />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input
+                class="input"
+                name="user_email"
+                type="email"
+                placeholder="joesmith@email.com"
+                required
+              />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea
+                class="input"
+                name="message"
+                placeholder="Your message here."
+                required
+              ></textarea>
+            </div>
+            <div class="form__btn">
+              <button id="submit" class="form__btn--btn">
+                Send it my way!
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
     <section id="languages">
