@@ -37,11 +37,13 @@ textarea {
   margin-top: 8px;
 }
 
-input:hover, textarea:hover {
+input:hover,
+textarea:hover {
   border-color: #736c73;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #f06449;
 }
 
@@ -88,6 +90,7 @@ p {
 
 .click {
   transition: all 400ms ease;
+  cursor: pointer;
 }
 .click:hover {
   color: #0f00de;
@@ -304,6 +307,7 @@ nav {
   width: 50%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .modal__about {
@@ -355,7 +359,7 @@ nav {
 }
 
 .form__btn--btn {
-  border-radius: 8Px;
+  border-radius: 8px;
   font-size: 20px;
   padding: 12px 24px;
   background-color: #f06449;
@@ -444,6 +448,57 @@ nav {
 
 .form__item {
   margin-bottom: 20px;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.modal__overlay--loading {
+  background-color: #1c1d25;
+  z-index: -1;
+  font-size: 88px;
+}
+
+.modal__overlay--success {
+  background-color: #4bb543;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 32px;
+}
+
+.fa-spinner {
+  animation: spinner 800ms infinite linear;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.modal__exit {
+  position: absolute;
+  top: 28px;
+  right: 40px;
+  color: white;
+  font-size: 36px;
+  z-index: 100;
+}
+
+.modal__exit:hover {
+  color: #1c1d25;
 }
 
 /*LANGUAGES*/
