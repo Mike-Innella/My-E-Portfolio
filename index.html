@@ -43,7 +43,9 @@
             <a href="#projects" class="nav__link--anchor click">Projects</a>
           </li>
           <li class="nav__link click">
-            <a href="#" class="nav__link--anchor click">Contact</a>
+            <a href="#" class="nav__link--anchor click" onclick="toggleModal()"
+              >Contact</a
+            >
           </li>
           <li class="nav__link">
             <a href="#" class="nav__link--anchor--icon">
@@ -90,7 +92,7 @@
           </div>
         </div>
       </header>
-      <div class="mail__btn click">
+      <div class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </div>
       <a href="#projects" class="scroll"
@@ -154,6 +156,7 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
           <h3 class="modal__title modal__title--contat">Let's have a chat!</h3>
           <h4 class="modal__sub-title modal__sub-title--contact">
             I'm currently open for new opportunities!
@@ -201,7 +204,6 @@
             Looking forward to speaking with you soon.
           </div>
         </div>
-        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
     <section id="languages">
@@ -321,8 +323,8 @@
           <figure class="link--box">
             <a
               href="#"
-              target="_blank"
               class="footer__social--link link__hover--effect--white"
+              onclick="toggleModal()"
               >Contact</a
             >
           </figure>

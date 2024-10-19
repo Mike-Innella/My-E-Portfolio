@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .color-text {
@@ -99,6 +100,29 @@ p {
 
 .click:active {
   transform: scale(0.8);
+}
+
+nav,
+.scroll,
+.header,
+.mail__btn,
+#languages,
+#projects,
+footer {
+  opacity: 1;
+  visibility: visible;
+  transition: all 800ms ease;
+}
+
+.modal--open nav,
+.modal--open .scroll,
+.modal--open .header,
+.modal--open .mail__btn,
+.modal--open #languages,
+.modal--open #projects,
+.modal--open footer {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /*LANDING PAGE*/
@@ -290,17 +314,25 @@ nav {
 /*MODAL*/
 
 .modal {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
   max-width: 1024px;
   height: 648px;
-  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+  visibility: hidden;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
+  z-index: -1;
+  transition: all 400ms ease;
+}
+
+.modal--open .modal {
+  z-index: 10;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+  visibility: visible;
 }
 
 .modal__half {
@@ -308,6 +340,12 @@ nav {
   display: flex;
   justify-content: center;
   position: relative;
+  transition: all 400ms ease;
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact {
+  transform: translateX(0%);
 }
 
 .modal__about {
@@ -315,6 +353,7 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 40px 72px;
+  transform: translateX(-110%);
 }
 
 .title__section--wrapper {
@@ -347,6 +386,7 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 64px 72px 40px 72px;
+  transform: translateX(110%);
 }
 
 .form__btn {
@@ -454,7 +494,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -478,6 +518,7 @@ nav {
 
 .modal__overlay--visible {
   z-index: 1;
+  display: flex;
 }
 
 .fa-spinner {
