@@ -772,6 +772,7 @@ footer {
   background-color: #242424;
   box-shadow: 8px 8px 8px 8px #1c1d25;
   padding-top: 36px;
+  position: relative;
 }
 
 .footer__logo {
@@ -942,4 +943,35 @@ footer {
   top: 90vh;
   left: 90vw;
   filter: grayscale(1);
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 768px) {
+  .title,
+  .title-title {
+    font-size: 76px;
+  }
+  .header__para {
+    font-size: 16px;
+  }
+  #landing-page,
+  #projects,
+  #languages {
+    padding: 36px;
+  }
+  .modal {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0;
+  }
+
+  .modal__half {
+    width: 100%;
+    height: 50%;
+  }
 }
