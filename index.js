@@ -2,6 +2,22 @@
 //service_mygmail
 //cePFoU8dvsaDAlAyz
 
+let isModalOpen = false;
+let contrastToggle = false;
+
+/*TOGGLE CONTRAST*/
+
+function toggleContrast() {
+  contrastToggle = !contrastToggle;
+  if (contrastToggle) {
+    document.body.classList += "dark-theme";
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
+}
+
+/*MODAL*/
+
 function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading");
@@ -29,7 +45,6 @@ function contact(event) {
     }, 1000);
 }
 
-let isModalOpen = false;
 function toggleModal() {
   if (isModalOpen) {
     isModalOpen = false;
