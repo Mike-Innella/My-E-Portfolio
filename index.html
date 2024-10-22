@@ -29,7 +29,7 @@
     </script>
     <meta charset="UTF-8" />
   </head>
-  <body>
+  <body onmousemove="moveBackground(event)">
     <section id="landing-page">
       <nav>
         <figure class="nav__link--logo">
@@ -47,9 +47,12 @@
               >Contact</a
             >
           </li>
-          <li class="nav__link" onclick=" toggleContrast()">
+          <li class="nav__link">
             <a href="#" class="nav__link--anchor--icon">
-              <i class="fa-solid fa-circle-half-stroke click"></i
+              <i
+                class="fa-solid fa-circle-half-stroke click"
+                onclick=" toggleContrast()"
+              ></i
             ></a>
           </li>
         </ul>
@@ -230,7 +233,7 @@
           </ul>
         </div>
       </div>
-      <img src="./assets/FES Assets/triangle.svg" class="shape shape--o" />
+      <img src="./assets/FES Assets/triangle.svg" class="shape shape--0" />
       <img src="./assets/FES Assets/triangle.svg" class="shape shape--1" />
       <img src="./assets/FES Assets/triangle.svg" class="shape shape--2" />
       <img src="./assets/FES Assets/triangle.svg" class="shape shape--3" />

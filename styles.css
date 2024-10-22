@@ -10,6 +10,7 @@
 
 body {
   background-color: #f5f5f5;
+  transition: all 400ms ease;
 }
 
 .color-text {
@@ -20,6 +21,7 @@ body {
 section {
   background-color: #f5f5f5;
   transition: all 400ms ease;
+  z-index: 5;
 }
 
 input,
@@ -110,13 +112,16 @@ p {
 nav,
 .scroll,
 .header,
-.mail__btn,
 #languages,
 #projects,
 footer {
   opacity: 1;
   visibility: visible;
   transition: all 400ms 600ms ease;
+}
+
+.mail__btn {
+  transition: all 400ms ease;
 }
 
 .modal--open nav,
@@ -131,7 +136,11 @@ footer {
   transition: all 400ms;
 }
 
-.dark-theme body {
+.modal--open {
+  overflow: hidden;
+}
+
+.dark-theme {
   background-color: #242424;
 }
 
@@ -162,13 +171,15 @@ footer {
   transition: all 400ms ease;
 }
 
+.dark-theme .scroll__icon::after,
 .dark-theme .scroll__icon {
+  color: white;
   border-color: white;
   transition: all 400ms ease;
 }
 
-.dark-theme .scroll__icon::after,
-.dark-theme .link__hover--black::after {
+.dark-theme .scroll__icon::after {
+  background-color: white;
   border-color: white;
   transition: all 400ms ease;
 }
@@ -176,6 +187,10 @@ footer {
 .dark-theme .mail__btn,
 .dark-theme .link__hover--black {
   background-color: #f5f5f5;
+}
+
+.dark-theme .link--box:hover::after {
+  background-color: #1c1d25;
 }
 
 .dark-theme .mail__btn i {
@@ -861,23 +876,70 @@ footer {
 
 /* SHAPES */
 
-.shape .shape--0,
-.shape .shape--1,
-.shape .shape--2 {
-  height: 35vh;
-  width: 5vw;
+.shape {
+  position: fixed;
+  width: 28px;
+  height: 28px;
+  opacity: 0.25;
+  animation: shapeSpin 9600ms linear infinite reverse;
 }
 
-.shape .shape--3,
-.shape .shape--4,
-.shape .shape--5 {
-  height: 70vh;
-  width: 50vw;
+@keyframes shapeSpin {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
 }
 
-.shape .shape--6,
-.shape .shape--7,
-.shape .shape--8 {
-  height: 95vh;
-  width: 80vw;
+.shape--0 {
+  top: 15vh;
+  left: 10vw;
+}
+
+.shape--1 {
+  top: 15vh;
+  left: 50vw;
+  filter: grayscale(1);
+}
+
+.shape--2 {
+  top: 15vh;
+  left: 90vw;
+  filter: invert(1);
+}
+
+.shape--3 {
+  top: 50vh;
+  left: 10vw;
+  filter: grayscale(1);
+}
+
+.shape--4 {
+  top: 50vh;
+  left: 50vw;
+  filter: invert(1);
+}
+
+.shape--5 {
+  top: 50vh;
+  left: 90vw;
+}
+
+.shape--6 {
+  top: 90vh;
+  left: 10vw;
+  filter: invert(1);
+}
+
+.shape--7 {
+  top: 90vh;
+  left: 50vw;
+}
+
+.shape--8 {
+  top: 90vh;
+  left: 90vw;
+  filter: grayscale(1);
 }
