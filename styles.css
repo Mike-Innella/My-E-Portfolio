@@ -1115,15 +1115,11 @@ footer {
     right: 0;
     width: 40px;
     height: 40px;
-    bottom: 8px;
-    right: 8px;
-    display: none;
+    bottom: 24px;
+    right: 24px;
   }
   .mail__btn i {
     font-size: 24px;
-  }
-  .scroll {
-    display: none;
   }
   #landing-page,
   #projects,
@@ -1196,10 +1192,19 @@ footer {
   .footer__logo {
     margin-top: 12px;
     margin-bottom: 4px;
+    padding-right: 3px;
+  }
+  .footer__social--list {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
   }
   .footer__social--link,
   .footer__copyright {
     font-size: 12px;
+  }
+  .footer__social--link {
+    padding: 24px;
   }
   .footer__copyright {
     margin: 0 auto;
@@ -1210,9 +1215,25 @@ footer {
     width: 16px;
     height: 16px;
   }
-
   .modal__half {
-    padding: 40px;
+    padding: 24px;
+  }
+  .form__btn {
+    margin: 0 auto;
+    padding: 4px;
+  }
+  .form__btn--btn {
+    font-size: 16px;
+  }
+  .modal__title,
+  .modal__sub-title {
+    display: none;
+  }
+  .modal__exit {
+    font-size: 20px;
+    top: 8px;
+    right: 8px;
+    margin: 4px;
   }
 }
 
