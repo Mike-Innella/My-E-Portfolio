@@ -122,6 +122,8 @@ footer {
 
 .mail__btn {
   transition: all 400ms ease;
+  box-shadow: 0 12px 32px 0 rgb(0 0 0 0.2);
+  z-index: 100;
 }
 
 .modal--open nav,
@@ -973,9 +975,6 @@ footer {
   .header {
     padding: 72px;
   }
-  .mail__btn {
-    position: absolute;
-  }
   .modal {
     height: 97%;
     width: 97%;
@@ -1068,9 +1067,6 @@ footer {
   }
   .language__text {
     margin-bottom: 8px;
-  }
-  .mail__btn {
-    position: absolute;
   }
 }
 
@@ -1170,26 +1166,50 @@ footer {
     justify-content: space-between;
   }
   .project__description--para,
-  .project__description--title {
+  .project__description--title,
+  .project__description--sub-title {
     font-size: 12px;
     padding: 4px;
   }
-  .project__description--sub-title {
-    font-size: 4px;
-    padding-bottom: 4px;
+  .project__anchors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    padding: 4px;
+    margin-top: 8px;
   }
   .project__description--link {
     font-size: 16px;
     margin: 0 auto;
     padding: 4px;
   }
+  footer {
+    padding: 0;
+  }
+  footer .container {
+    padding: 4px;
+  }
+  .footer__logo {
+    margin-top: 12px;
+    margin-bottom: 4px;
+  }
   .footer__social--link,
   .footer__copyright {
     font-size: 12px;
   }
+  .footer__copyright {
+    margin: 0 auto;
+    padding-bottom: 8px;
+    padding-top: 4px;
+  }
   .shape {
     width: 16px;
     height: 16px;
+  }
+
+  .modal__half {
+    padding: 40px;
   }
 }
 
