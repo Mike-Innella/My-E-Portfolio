@@ -292,7 +292,16 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: none;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+
+.scroll__icon:hover::after {
+  background-color: #665cf4;
+}
+
+.scroll__icon:hover {
+  border-color: #665cf4;
 }
 
 .scroll__icon::after {
@@ -301,6 +310,7 @@ footer {
   height: 8px;
   background-color: #242424;
   border-radius: 4px;
+  transition: all 400ms ease;
   animation: scroll 800ms infinite alternate-reverse;
 }
 
@@ -632,64 +642,6 @@ nav {
 
 .modal__exit:hover {
   color: #f06449;
-}
-
-/*LANGUAGES*/
-
-.tech__list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 48px;
-}
-
-.tech__list--point {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-}
-.tech__list--point i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 72px;
-  width: 60px;
-  height: 60px;
-  transition: all 400ms ease;
-}
-
-.tech__list--point i:hover {
-  transform: scale(1.4);
-}
-
-.tech__list--point:nth-child(1) i:hover {
-  color: red;
-}
-
-.tech__list--point:nth-child(2) i:hover {
-  color: blue;
-}
-
-.tech__list--point:nth-child(3) i:hover {
-  color: yellow;
-  background-color: black;
-}
-
-.tech__list--point i:hover + .tech__list--text {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.tech__list--text {
-  padding-top: 16px;
-  opacity: 0;
-  transition: all 400ms ease;
-  pointer-events: none;
 }
 
 /* PROJECTS */
